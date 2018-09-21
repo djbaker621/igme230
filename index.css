@@ -1,0 +1,40 @@
+html{
+    background-color: #447BA6;
+}
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+#box{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#ident{
+    text-align: center;
+    width: 285px;
+    float: left;
+    color: #041A2C;
+    background-color: #78AED7;
+    border: 2px solid #144062;
+    font-size: 100%;
+    margin: .5em 0;
+}
+#ident img{
+    border-top: 2px solid #144062;
+    max-width: 100%;
+}
+#content{
+    width:685px;
+    text-align: left;
+    float:right;
+    clear:right;
+    color: #041A2C;
+    background-color: #78AED7;
+    border:2px solid #144062;
+    margin: .5em;
+    font-size: 90%;
+}
+h2{
+    border-bottom: 2px solid #144062;
+    margin: .5em;
+}

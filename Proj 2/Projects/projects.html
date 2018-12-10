@@ -17,16 +17,16 @@
     <div>
         <table>
             <tr>
-                <th><img src="Concentration.jpg" alt="Digital Paiting"></th>
-                <td>This project was from my AP 2D Studio Art class in high school. Each student was instructed at the beginning of the year to pick a concentration topic and display it in 12 pieces of art. My concentration topic was bowling and this specific piece is a digital painting created using Adobe Photoshop. It was created by using the paintbrush to lay down an initial layer of color and the mixer brush to blend the colors together giving it a painted look. </td>
+                <th><img src="Concentration.jpg" alt="Digital Paiting" id="pic1"></th>
+                <td id="proj1">This project was from my AP 2D Studio Art class in high school. Each student was instructed at the beginning of the year to pick a concentration topic and display it in 12 pieces of art. My concentration topic was bowling and this specific piece is a digital painting created using Adobe Photoshop. It was created by using the paintbrush to lay down an initial layer of color and the mixer brush to blend the colors together giving it a painted look. </td>
             </tr>
             <tr>
-                <th><img src="Dylan%20Baker%20Project%203%20Exploration%201%20Final.png" alt="Awareness Ad"></th>
-                <td>This was an assignment in my Digital Survey II class is college. The objective was to create an awareness poster for a specific issue, mine being suicide awareness. It was created using Adobe Illustrator. The pen tool and text tool were used for most of project. I went for a more simplistic design in order to represent the mind o someone with depression who'd be going through thoughts of suicide.</td>
+                <th><img src="Dylan%20Baker%20Project%203%20Exploration%201%20Final.png" alt="Awareness Ad" id="pic2"></th>
+                <td id="proj2">This was an assignment in my Digital Survey II class is college. The objective was to create an awareness poster for a specific issue, mine being suicide awareness. It was created using Adobe Illustrator. The pen tool and text tool were used for most of project. I went for a more simplistic design in order to represent the mind o someone with depression who'd be going through thoughts of suicide.</td>
             </tr>
             <tr>
-                <th><img src="Project3_Baker,Dylan.jpg" alt="Typographic Design"></th>
-                <td>This image was part of my Digital Survey I class. The assignment was to create the image of an animal using the letters in its name. This was semi-difficult because most of the initial animals I had chosen just didn't look well typographically. For whatever reason I had a fairly clear image of how I wanted the angler fish to look, my initial thought was that its jaw would make a great "L". The piece was created using the pen tool in Adobe Illustrator and sketching made creating the final product much simpler.</td>
+                <th><img src="Project3_Baker,Dylan.jpg" alt="Typographic Design" id="pic3"></th>
+                <td id="proj3">This image was part of my Digital Survey I class. The assignment was to create the image of an animal using the letters in its name. This was semi-difficult because most of the initial animals I had chosen just didn't look well typographically. For whatever reason I had a fairly clear image of how I wanted the angler fish to look, my initial thought was that its jaw would make a great "L". The piece was created using the pen tool in Adobe Illustrator and sketching made creating the final product much simpler.</td>
             </tr>
         </table>
     </div>
@@ -48,23 +48,51 @@
         margin-right: 20px;
         margin-bottom: 20px;
     }
+    table {
+        display: grid;
+        grid-template-areas:"a b b" "c d d" "e f f";
+    }
+    #pic1{
+        grid-area: a;
+        margin: 15px 0 15px 0;
+        max-height: 500px;
+    }
+    #pic2{
+        grid-area: c;
+        margin: 15px 0 15px 0;
+        max-height: 500px;
+    }
+    #pic3{
+        grid-area: e;
+        margin: 15px 0 15px 0;
+        max-height: 500px;
+    }
+    #proj1{
+        grid-area: b;
+        max-height: 600px;
+        margin-left: 15px;
+        font-size: 30px;
+        text-align: center;
+    }
+    #proj2{
+        grid-area: d;
+        max-height: 600px;
+        margin-left: 15px;
+        font-size: 30px;
+        text-align: center;
+    }
+    #proj3{
+        grid-area: f;
+        max-height: 600px;
+        margin-left: 15px;
+        font-size: 30px;
+        text-align: center;
+    }
 
     tr {
         border: 1px solid #7788AA;
         justify-content: flex-start;
         margin: 15px 15px 15px 15px;
-    }
-
-    th {
-        margin-left: 15px;
-        vertical-align: top;
-    }
-
-    img {
-        float: left;
-
-        margin: 15px 0 15px 0;
-        max-height: 500px;
     }
 
     h1 {
@@ -84,13 +112,6 @@
         justify-content: flex-start;
     }
 
-    td {
-        max-height: 600px;
-        margin-left: 15px;
-        font-size: 20px;
-        text-align: center;
-    }
-
     #home {
         height: 50px;
         width: 60px;
@@ -101,6 +122,7 @@
     @media screen and (max-width: 36rem) {
         flex-direction: column;
         width: 100vw;
+        grid-template-areas: "a" "b" "c" "d" "e" "f"
 
     }
 </style>

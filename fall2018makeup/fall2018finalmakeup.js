@@ -6,8 +6,8 @@ let norm = ("story0.txt");
 $("#stories").val(norm);
 $("#story").load(norm);
 
-$("#stories").change(function (){
-    i = $(this).val();
+$("story1.txt").click(function (){
+    norm = $(this).val();
     $("#story").load(norm);
 })
 

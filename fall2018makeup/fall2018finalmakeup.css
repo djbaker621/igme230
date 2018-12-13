@@ -76,8 +76,22 @@ nav{
     background-color: lightsalmon;
 }
 
+/*
+#increment{
+    display: flex;
+    position: absolute;
+    left: 795px;
+    top: 730px;
+    width: 80px;
+    height: 22px;
+}
+*/
+
 #extracredit{
     grid-area: e;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 footer{

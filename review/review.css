@@ -1,0 +1,121 @@
+/*****************
+General Formatting
+******************/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* sets base font size for rem sizing */
+    font-size: 16px;
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+article,
+aside {
+    padding: .5rem;
+}
+
+#extracredit {
+/*    width: 75%;*/
+/*
+    margin: 1rem;
+    padding: 1rem;
+*/
+    border: 1px solid black;
+}
+
+
+/**************
+Your Formatting
+***************/
+#mygrid {
+    display: grid;
+    width: 90vw;
+    max-width: 1000px;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 75px 30px 1fr 2fr 50px;
+    grid-template-areas: "a a""d d""b c""f c""e e";
+}
+
+header {
+    grid-area: a;
+    background-color: lightpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    grid-area: d;
+    background-color: lavenderblush;
+    display: flex;
+    justify-content: center;
+    justify-content:space-around;
+    align-items: center;
+}
+
+article {
+    grid-area: c;
+    background-color: lightcyan;
+    position:relative;
+    z-index: 1;
+}
+
+aside {
+    grid-area: b;
+    background-color: lightblue;
+}
+
+footer {
+    grid-area: e;
+    background-color: lightpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top{
+    width: 6rem;
+    background-color: #ccc;
+    position: absolute;
+    top: 80px;
+    margin: auto;
+    padding: auto;
+}
+
+.list{
+    margin: 0;
+    padding: auto 0;
+    padding-left: .25rem;
+    background-color: #ddd;
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    width: 6rem;
+    top: 99px;
+    
+}
+#extracredit{
+    grid-area: f;
+    background-color: lightblue;
+}
+
+@media only screen and (max-width: 600px){
+    #mygrid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 75px 30px auto auto auto 30px;
+        grid-template-areas: "a" "d" "c" "b" "f" "e";
+    }
+    .top{
+        
+    }
+}
